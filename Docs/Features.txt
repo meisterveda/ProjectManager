@@ -1,0 +1,25 @@
+Basic Information
+
+Name:
+Type:
+
+Features
+
+Server:
+
+* [ ] Create projects
+* [ ] Create files and folders
+* [ ] Create GitHub project
+* [ ] Create Gitlab project
+* [ ] Create Gitlab CI/CD file
+* [ ] Create files from templates
+* [ ] Create statistics and reports
+
+App:
+
+* [ ] Dashboard
+* [ ] Job Search - Job boards - Jobs with ID
+* [ ] MessageBoard - Inbox - sent messages
+* [ ] Project Manager
+* [ ] About
+* [ ] Administration
