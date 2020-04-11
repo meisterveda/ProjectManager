@@ -1,0 +1,43 @@
+
+* [ ] Dashboard
+* [ ] JobBoard Search - Job boards - Jobs Details
+* [ ] MessageBoard - Inbox - sent messages
+* [ ] ProjectBoard - Board - Manager - Project Details - Create Project
+* [ ] About - Page
+* [ ] Administration
+
+app
+
+- components
+    - layouts
+        - default
+    - shared
+        - blocks
+            - header
+            - footer
+            - navbar
+    - modules
+        - dashboard
+            - dashboard
+            
+        - jobboard
+            - jobboard
+            - jobsearch
+            - jobdetails
+        - messageboard
+            - messageboard
+            - messageinbox
+            - messagesent
+            - messagedetails
+        - projectboard
+            - projectboard
+            - projectmanager
+            - projectdetails
+            - projectcreate
+        - adminboard
+            - adminboard
+    - pages
+        - aboutpage
+- models
+
+- services

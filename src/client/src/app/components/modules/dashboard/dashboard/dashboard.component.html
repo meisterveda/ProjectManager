@@ -1,0 +1,62 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" class="stats-cards">
+    <mat-card fxFlex="25">
+        Jobs (pie Chart)
+    </mat-card>
+    <mat-card fxFlex="25">
+        Proposals
+    </mat-card>
+    <mat-card fxFlex="25">
+        Git Activity
+    </mat-card>
+    <mat-card fxFlex="25">
+        Server Activity
+    </mat-card>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="50">
+        <div class="mat-elevation-z8">
+            ongoing jobs and New jobs and Messages
+            <button mat-raised-button (click)="addColumn()"> Add column </button>
+            <button mat-raised-button (click)="removeColumn()"> Remove column </button>
+            <button mat-raised-button (click)="shuffle()"> Shuffle </button>
+
+            <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+            </table>
+        </div>
+    </div>
+    <div fxFlex="50">
+        <div class="mat-elevation-z8">
+            Server activity and Pipeline Activity and Git Activity
+            <button mat-raised-button (click)="addColumn()"> Add column </button>
+            <button mat-raised-button (click)="removeColumn()"> Remove column </button>
+            <button mat-raised-button (click)="shuffle()"> Shuffle </button>
+
+            <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+            </table>
+        </div>
+    </div>
+    
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div>
+    upcoming Activities
+</div>

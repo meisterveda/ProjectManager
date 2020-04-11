@@ -18,8 +18,8 @@ Server:
 App:
 
 * [ ] Dashboard
-* [ ] Job Search - Job boards - Jobs with ID
+* [ ] JobBoard Search - Job boards - Jobs Details
 * [ ] MessageBoard - Inbox - sent messages
-* [ ] Project Manager
-* [ ] About
+* [ ] ProjectBoard - Board - Manager - Project Details - Create Project
+* [ ] About - Page
 * [ ] Administration
