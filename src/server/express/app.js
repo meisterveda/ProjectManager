@@ -7,7 +7,7 @@ const githubRouter = require('./router/external/github');
 
 const app = express();
 
-dotenv.config({ path: './config/config.env' });
+dotenv.config({ path: './config/settings.env' });
 
 const port = process.env.PORT;
 
