@@ -36,8 +36,18 @@ app
             - projectcreate
         - adminboard
             - adminboard
+        - settings
+        - userprofile
     - pages
-        - aboutpage
+        - about
+        - help
 - models
 
 - services
+    - Jobs
+    - messages
+    - projects
+    - settings
+    - Administration
+    - server
+    - Git

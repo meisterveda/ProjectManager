@@ -21,6 +21,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { SettingsComponent } from '../../modules/settings/settings.component';
+import { UserprofileComponent } from '../../modules/userprofile/userprofile.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { MatTableModule } from '@angular/material/table';
     ProjectboardComponent,
     ProjectmanagerComponent,
     ProjectdetailsComponent,
-    ProjectcreateComponent
+    ProjectcreateComponent,
+    SettingsComponent,
+    UserprofileComponent,
   ],
   imports: [
     CommonModule,

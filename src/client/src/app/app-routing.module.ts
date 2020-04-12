@@ -7,6 +7,9 @@ import { MessageboardComponent } from './components/modules/messages/messageboar
 import { ProjectboardComponent } from './components/modules/projects/projectboard/projectboard.component';
 import { AdminboardComponent } from './components/modules/admin/adminboard/adminboard.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import { HelpComponent } from './components/pages/help/help.component';
+import { SettingsComponent } from './components/modules/settings/settings.component';
+import { UserprofileComponent } from './components/modules/userprofile/userprofile.component';
 
 
 const routes: Routes = [{
@@ -28,8 +31,17 @@ const routes: Routes = [{
     path: 'admin',
     component: AdminboardComponent
   }, {
+    path: 'settings',
+    component: SettingsComponent
+  }, {
+    path: 'userprofile',
+    component: UserprofileComponent
+  }, {
     path: 'about',
     component: AboutComponent
+  }, {
+    path: 'help',
+    component: HelpComponent
   }]
 }];
 
