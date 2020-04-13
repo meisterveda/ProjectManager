@@ -12,4 +12,13 @@ export class ProjectboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  tabLoadTimes: Date[] = [];
+
+  getTimeLoaded(index: number) {
+    if (!this.tabLoadTimes[index]) {
+      this.tabLoadTimes[index] = new Date();
+    }
+
+    return this.tabLoadTimes[index];
+  }
 }

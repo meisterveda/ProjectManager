@@ -1,1 +1,17 @@
-<p>projectboard works!</p>
+<mat-tab-group backgroundColor="primary" color="accent">
+    <mat-tab label="Board">
+      <ng-template matTabContent>
+        Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Project Management">
+      <ng-template matTabContent>
+        Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Create Project">
+        <ng-template matTabContent>
+          Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}
+        </ng-template>
+      </mat-tab>
+  </mat-tab-group>

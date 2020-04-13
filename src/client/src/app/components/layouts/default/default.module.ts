@@ -23,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { SettingsComponent } from '../../modules/settings/settings.component';
 import { UserprofileComponent } from '../../modules/userprofile/userprofile.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { UserprofileComponent } from '../../modules/userprofile/userprofile.comp
     FlexLayoutModule,
     MatDividerModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule
   ]
 })
 export class DefaultModule { }

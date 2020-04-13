@@ -6,6 +6,9 @@ import { HeaderComponent } from './blocks/header/header.component';
 import { FooterComponent } from './blocks/footer/footer.component';
 import { NavbarComponent } from './blocks/navbar/navbar.component';
 
+import { CardComponent } from './widgets/card/card.component';
+import { TableComponent } from './widgets/table/table.component';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -14,6 +17,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -21,7 +27,9 @@ import { MatDividerModule } from '@angular/material/divider';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -32,12 +40,17 @@ import { MatDividerModule } from '@angular/material/divider';
     FlexLayoutModule,
     MatButtonModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableComponent,
+    CardComponent
   ]
 })
 export class SharedModule { }

@@ -1,1 +1,125 @@
-<p>jobboard works!</p>
+<mat-tab-group>
+    <mat-tab label="Board">
+        <ng-template matTabContent>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" class="stats-cards">
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Jobs" total="" icon="assignment" content="Job Card Information">
+                    </app-widget-card>
+                </mat-card>
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Proposals" total="" icon="work" content=" Work Proposals
+                    ">
+                    </app-widget-card>
+                </mat-card>
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Git" total="" icon="device_hub" content=" Git Activities
+                    ">
+                    </app-widget-card>
+                </mat-card>
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Server" total="" icon="storage" content=" Server Activities
+                    ">
+                    </app-widget-card>
+                </mat-card>
+            </div>
+            <br>
+            <mat-divider></mat-divider>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        ongoing jobs and New jobs and Messages
+                        <mat-tab-group>
+                            <mat-tab label="Ongoing Jobs">
+                                <ng-template matTabContent>
+                                    <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                                        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                                            <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                                            <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                                        </ng-container>
+                        
+                                        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                                    </table>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="">
+                                <ng-template matTabContent>
+                                    <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                                        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                                            <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                                            <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                                        </ng-container>
+                        
+                                        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                                    </table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        Server activity and Pipeline Activity and Git Activity
+            
+                        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                            </ng-container>
+            
+                            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <mat-divider></mat-divider>
+            <br>
+            <div>
+                upcoming Activities list
+            </div>
+            
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Search">
+        <ng-template matTabContent>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        ongoing jobs and New jobs and Messages
+                        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                            </ng-container>
+            
+                            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                        </table>
+                    </div>
+                </div>
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        Server activity and Pipeline Activity and Git Activity
+                        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+                            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                            </ng-container>
+            
+                            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </ng-template>
+    </mat-tab>
+  </mat-tab-group>

@@ -16,10 +16,11 @@ app
             - header
             - footer
             - navbar
+        - widgets
+            - table
     - modules
         - dashboard
             - dashboard
-            
         - jobboard
             - jobboard
             - jobsearch
@@ -42,7 +43,13 @@ app
         - about
         - help
 - models
-
+    - Jobs
+    - messages
+    - projects
+    - settings
+    - Administration
+    - server
+    - Git
 - services
     - Jobs
     - messages

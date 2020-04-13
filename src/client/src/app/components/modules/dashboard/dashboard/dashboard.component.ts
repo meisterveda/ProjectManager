@@ -27,14 +27,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class DashboardComponent implements OnInit {
 
+  displayedColumns: string[] = ['name', 'weight', 'symbol', 'position'];
+  columnsToDisplay: string[] = this.displayedColumns.slice();
+  data: PeriodicElement[] = ELEMENT_DATA;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['name', 'weight', 'symbol', 'position'];
-  columnsToDisplay: string[] = this.displayedColumns.slice();
-  data: PeriodicElement[] = ELEMENT_DATA;
 
   addColumn() {
     const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
@@ -50,11 +52,11 @@ export class DashboardComponent implements OnInit {
   shuffle() {
     let currentIndex = this.columnsToDisplay.length;
     while (0 !== currentIndex) {
-      let randomIndex = Math.floor(Math.random() * currentIndex);
+      const randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
 
       // Swap
-      let temp = this.columnsToDisplay[currentIndex];
+      const temp = this.columnsToDisplay[currentIndex];
       this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
       this.columnsToDisplay[randomIndex] = temp;
     }

@@ -3,41 +3,11 @@
         <nav>
             <div xFlex fxLayout="row" fxLayoutAlign="flex-start" fxLayoutGap="5px"> 
                 <a routerLink="/" mat-raised-button>Dashboard</a>
-                <button mat-raised-button [matMenuTriggerFor]="jobsmenu">Jobs</button>
-                <mat-menu #jobsmenu="matMenu">
-                    <a mat-menu-item routerLink="/jobs">
-                        Job Board
-                    </a>
-                    <a mat-menu-item routerLink="/jobs">
-                        Job Search
-                    </a>
-                </mat-menu>
-                <button mat-raised-button [matMenuTriggerFor]="Messagesmenu">Messages</button>
-                <mat-menu #Messagesmenu="matMenu">   
-                    <a mat-menu-item routerLink="/messages" >
-                        Messages Board
-                    </a>
-                    <a mat-menu-item routerLink="/jobs">
-                        Message Inbox
-                    </a>
-                    <a mat-menu-item routerLink="/jobs">
-                        Message Sent
-                    </a>
-                </mat-menu>
-                <button mat-raised-button [matMenuTriggerFor]="Projectmenu">Projects</button>
-                <mat-menu #Projectmenu="matMenu">   
-                    <a mat-menu-item routerLink="/projects">
-                        Project Board
-                    </a>
-                    <a mat-menu-item routerLink="/jobs">
-                        Project Manager
-                    </a>
-                    <a mat-menu-item routerLink="/jobs">
-                        Project Creation
-                    </a>
-                </mat-menu>
-                <a mat-raised-button routerLink="/admin">Administration</a>
-                <a mat-raised-button routerLink="/about">About Us</a>
+                <a routerLink="/jobs" mat-raised-button >Jobs</a>
+                <a routerLink="/messages" mat-raised-button >Messages</a>
+                <a routerLink="/projects" mat-raised-button >Projects</a>
+                <a routerLink="/admin" mat-raised-button >Administration</a>
+                <a routerLink="/about" mat-raised-button >About Us</a>
             </div>
         </nav>
     </mat-toolbar-row>
