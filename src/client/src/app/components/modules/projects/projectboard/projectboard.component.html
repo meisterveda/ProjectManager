@@ -1,17 +1,123 @@
-<mat-tab-group backgroundColor="primary" color="accent">
+  <mat-tab-group>
     <mat-tab label="Board">
-      <ng-template matTabContent>
-        Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}
-      </ng-template>
+        <ng-template matTabContent>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" class="stats-cards">
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Job Matches" total="" icon="assignment" content="Job Matches">
+                    </app-widget-card>
+                </mat-card>
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Active Jobs" total="" icon="work" content="Active Jobs">
+                    </app-widget-card>
+                </mat-card>
+                <mat-card fxFlex="25">
+                    <app-widget-card label="In Review" total="" icon="rate_review" content="In Review">
+                    </app-widget-card>
+                </mat-card>
+                <mat-card fxFlex="25">
+                    <app-widget-card label="Earnings" total="" icon="account_balance" content="Earnings">
+                    </app-widget-card>
+                </mat-card>
+            </div>
+            <br>
+            <mat-divider></mat-divider>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        <mat-tab-group>
+                            <mat-tab label="Ongoing Jobs">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="In Review Jobs">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        <mat-tab-group>
+                            <mat-tab label="Earnings Reports">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Invoiced Reports">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Project Management">
-      <ng-template matTabContent>
-        Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}
-      </ng-template>
+        <ng-template matTabContent>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        <mat-tab-group>
+                            <mat-tab label="Job Proposals">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+                <div fxFlex="50">
+                    <div class="mat-elevation-z2">
+                        <mat-tab-group>
+                            <mat-tab label="All Jobs">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+                
+            </div>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Create Project">
-        <ng-template matTabContent>
-          Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}
-        </ng-template>
-      </mat-tab>
+      <ng-template matTabContent>
+          <br>
+          <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+              <div fxFlex="50">
+                  <div class="mat-elevation-z2">
+                      <mat-tab-group>
+                          <mat-tab label="Job Proposals">
+                              <ng-template matTabContent>
+                                  <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                              </ng-template>
+                          </mat-tab>
+                      </mat-tab-group>
+                  </div>
+              </div>
+              <div fxFlex="50">
+                  <div class="mat-elevation-z2">
+                      <mat-tab-group>
+                          <mat-tab label="All Jobs">
+                              <ng-template matTabContent>
+                                  <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                              </ng-template>
+                          </mat-tab>
+                      </mat-tab-group>
+                  </div>
+              </div>
+              
+          </div>
+      </ng-template>
+  </mat-tab>
   </mat-tab-group>
+  

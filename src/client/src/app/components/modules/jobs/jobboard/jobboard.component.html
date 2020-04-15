@@ -4,22 +4,19 @@
             <br>
             <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" class="stats-cards">
                 <mat-card fxFlex="25">
-                    <app-widget-card label="Jobs" total="" icon="assignment" content="Job Card Information">
+                    <app-widget-card label="Job Matches" total="" icon="assignment" content="Job Matches">
                     </app-widget-card>
                 </mat-card>
                 <mat-card fxFlex="25">
-                    <app-widget-card label="Proposals" total="" icon="work" content=" Work Proposals
-                    ">
+                    <app-widget-card label="Active Jobs" total="" icon="work" content="Active Jobs">
                     </app-widget-card>
                 </mat-card>
                 <mat-card fxFlex="25">
-                    <app-widget-card label="Git" total="" icon="device_hub" content=" Git Activities
-                    ">
+                    <app-widget-card label="In Review" total="" icon="rate_review" content="In Review">
                     </app-widget-card>
                 </mat-card>
                 <mat-card fxFlex="25">
-                    <app-widget-card label="Server" total="" icon="storage" content=" Server Activities
-                    ">
+                    <app-widget-card label="Earnings" total="" icon="account_balance" content="Earnings">
                     </app-widget-card>
                 </mat-card>
             </div>
@@ -29,32 +26,15 @@
             <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
                 <div fxFlex="50">
                     <div class="mat-elevation-z2">
-                        ongoing jobs and New jobs and Messages
                         <mat-tab-group>
                             <mat-tab label="Ongoing Jobs">
                                 <ng-template matTabContent>
-                                    <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                                        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-                                            <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-                                            <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-                                        </ng-container>
-                        
-                                        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                                        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-                                    </table>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
                                 </ng-template>
                             </mat-tab>
-                            <mat-tab label="">
+                            <mat-tab label="In Review Jobs">
                                 <ng-template matTabContent>
-                                    <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                                        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-                                            <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-                                            <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-                                        </ng-container>
-                        
-                                        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                                        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-                                    </table>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
                                 </ng-template>
                             </mat-tab>
                         </mat-tab-group>
@@ -62,28 +42,21 @@
                 </div>
                 <div fxFlex="50">
                     <div class="mat-elevation-z2">
-                        Server activity and Pipeline Activity and Git Activity
-            
-                        <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-                                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-                                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-                            </ng-container>
-            
-                            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-                        </table>
+                        <mat-tab-group>
+                            <mat-tab label="Earnings Reports">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Invoiced Reports">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
                     </div>
                 </div>
-                
             </div>
-            <br>
-            <mat-divider></mat-divider>
-            <br>
-            <div>
-                upcoming Activities list
-            </div>
-            
         </ng-template>
     </mat-tab>
     <mat-tab label="Search">
@@ -92,30 +65,24 @@
             <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
                 <div fxFlex="50">
                     <div class="mat-elevation-z2">
-                        ongoing jobs and New jobs and Messages
-                        <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-                                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-                                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-                            </ng-container>
-            
-                            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-                        </table>
+                        <mat-tab-group>
+                            <mat-tab label="Job Proposals">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
                     </div>
                 </div>
                 <div fxFlex="50">
                     <div class="mat-elevation-z2">
-                        Server activity and Pipeline Activity and Git Activity
-                        <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-                                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-                                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-                            </ng-container>
-            
-                            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-                        </table>
+                        <mat-tab-group>
+                            <mat-tab label="All Jobs">
+                                <ng-template matTabContent>
+                                    <app-widget-table [tableData]="data" [columnHeader]="displayedColumns"></app-widget-table>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
                     </div>
                 </div>
                 

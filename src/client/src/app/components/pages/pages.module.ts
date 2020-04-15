@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
 
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { HelpComponent } from './help/help.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatExpansionModule
   ],
   exports: [
     AboutComponent,

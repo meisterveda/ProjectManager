@@ -27,8 +27,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class JobboardComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'weight', 'symbol', 'position'];
-  columnsToDisplay: string[] = this.displayedColumns.slice();
+  displayedColumns = {name : 'Element Name', position : 'Position', weight : 'Weight', symbol : 'Symbol'};
   data: PeriodicElement[] = ELEMENT_DATA;
 
   constructor() { }
